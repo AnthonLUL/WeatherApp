@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..."
+    crossorigin="anonymous" />
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="header">
+        
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" id="cityInput" placeholder="Search City" onfocus="handleFocus()" onblur="handleBlur()" onkeydown="handleEnter(event)">
+                <i id="searchIcon" class="fas fa-magnifying-glass"></i>
+            </div>
+            <!-- Add the suggestions container here -->
+            <div id="suggestionsContainer"></div>
+        </div>
+    </div>
+    
+
+    <div class="navbar">
+        <a href="#" onclick="getWeather('today')">Today</a>
+        <a href="#" onclick="getWeeklyWeather()">Weekly</a>
+        <a href="#" onclick="getMonthlyWeather('monthly')">Monthly</a>
+    </div>
+
+    <div class="weather-container">
+        <h2 id="city">City Name</h2>
+        <div class="button-container"> 
+        </div>
+
+        <!-- Separate sections for different "pages" -->
+        <div id="today" class="page-content active">
+            <!-- Content for the Today page -->
+            <p id="temperature">Temperature</p>
+            <p id="condition">Weather Condition</p>
+            <div id="additional-info" class="forecast-container">
+                <!-- Additional information can be displayed here -->
+            </div>
+        </div>
+
+        <div id="weekly" class="page-content">
+            <!-- Content for the Weekly page -->
+            <h3>Weekly Forecast</h3>
+            <div id="weeklyForecastContainer" class="forecast-container">
+                <!-- Forecast items will be added here dynamically -->
+            </div>
+        </div>
+
+        <div id="monthly" class="page-content">
+            <!-- Content for the Monthly page -->
+            <h3>Monthly Forecast</h3>
+            <p id="temperature">Temperature</p>
+            <p id="condition">Weather Condition</p>        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

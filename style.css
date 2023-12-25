@@ -1,0 +1,190 @@
+body {
+    background: linear-gradient(0deg,#615878,#615878 20%,#464161 60%,#313050 90%,#313050);
+    color: #ffffff; /* Text color for better readability on dark background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.temperature-picker {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-bar {
+    background-color: #313050; 
+    padding: 10px;
+    text-align: center;
+    top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #1d1d32;
+    position: fixed;
+    width: 100%;
+    top: 80px; /* Adjust the top position to leave space for the search bar */
+}
+
+.weather-container {
+    height: auto;
+    width: auto;
+    text-align: center;
+    background-color: #1a1a1a; /* Darker background for the content */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    margin: 10px auto; /* Set margin to auto and remove margin-bottom */
+    margin-top: 70px; /* Adjust the margin-top to create space for the navbar */
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 33.33%; /* Set each link to take up one-third of the width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+#city {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+#cityInput {
+    height: 5px;
+    background: hsla(0, 0%, 100%, 0.2);
+    width: 300px;
+    padding: 15px;
+    font-size: 18px;
+    border: 3px hsla(0, 0%, 100%, 0.2);
+    border-radius: 50px;
+    outline: none;
+    margin: 10px auto; /* Set margin to auto and remove margin-bottom */
+    margin-top: 10px;
+    text-align: center; /* Center the text within the input field */
+}
+
+
+#cityInput:focus {
+    border-color: #fff;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#searchIcon {
+    position: absolute;
+    right: 575px; /* Adjust the right position as needed */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    color: #fff;
+    cursor: pointer;
+}
+
+.forecast-item {
+    display: inline-block;
+    width: 120px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #ffffff;
+}
+
+
+#temperature {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.page-content {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+#condition {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#additional-info {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .weather-container {
+        width: 80%;
+    }
+}
+
+#suggestionsContainer {
+    position: absolute;
+    top: calc(100% + 80px); /* Adjusted to include the height of the navbar */
+    left: 0;
+    width: 100%;
+    background-color: #f3efef;
+    color: #000000;
+    z-index: 9999 !important;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Add more styling as needed */
+.suggestion {
+    padding: 8px;
+    cursor: pointer;
+    /* Adjust text color if necessary */
+    color: #000000; /* Set text color for better visibility */
+}
+
